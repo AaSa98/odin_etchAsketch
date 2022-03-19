@@ -11,4 +11,15 @@ body {
   width: 500px;
   height: 500px;
   display: grid;
+  border: 8px darkgray solid;
+  border-radius: 6px;
+}
+
+.interaction {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
 }
