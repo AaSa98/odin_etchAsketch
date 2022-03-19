@@ -15,8 +15,8 @@
       <div class="interaction">
       <div class="controls">
         <p class="control_label">Grid-Größe eingeben</p>
-        <input type="number" id="number_input">
-        <button id="submit_btn">OK</button>
+        <input type="text" placeholder="Size of Board" id="number_input" onchange="changeSize(this.value)">
+        <button id="submit_btn" onclick="changeSize(number)">OK</button>
       </div>
       <div class="board"></div>
     </div>
