@@ -20,19 +20,21 @@ function populateBoard(size) {
 }
 
 function clearBoard() {
-
+  let board = document.querySelector(".board");
+  let pixels = board.querySelectorAll("div");
+  pixels.forEach((pixel) => (pixel.style.backgroundColor = "gray"));
 }
 
 function changeSize(input) {
   const sliderValue = document.getElementById("sliderValue");
   sliderValue.textContent = input;
+  clearBoard();
   populateBoard(input);
 }
 
-function loadPage(){
+function loadPage() {
   populateBoard(16);
-sliderValue.textContent = "16";
+  sliderValue.textContent = "16";
 }
 
 loadPage();
-
