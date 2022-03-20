@@ -12,20 +12,27 @@ function populateBoard(size) {
   for (let i = 0; i < Math.pow(size, 2); i++) {
     let square = document.createElement("div");
     square.style.backgroundColor = "gray";
-    square.addEventListener("mouseover",() =>{
+    square.addEventListener("mouseover", () => {
       square.style.backgroundColor = "black";
-    })
+    });
     board.insertAdjacentElement("beforeend", square);
   }
 }
 
-//So wird bei Start Board mit 16x16 generiert
-populateBoard(16)
+function clearBoard() {
 
-// submit_btn
-// number_input
-// wenn submit_btn click, dann populateBoard(text_input), default 16
+}
 
-function changeSize(input){
+function changeSize(input) {
+  const sliderValue = document.getElementById("sliderValue");
+  sliderValue.textContent = input;
   populateBoard(input);
 }
+
+function loadPage(){
+  populateBoard(16);
+sliderValue.textContent = "16";
+}
+
+loadPage();
+
