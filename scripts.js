@@ -52,6 +52,7 @@ function changeColor(colorPick) {
   }
 }
 
+//Generiert zufälligen Hex-Code für Farbe
 function randomColorPick() {
   var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
   return randomColor;
@@ -67,6 +68,7 @@ function changeToRandomColor() {
   );
 }
 
+//Standard-Settings bei Laden der Seite
 function loadPage() {
   populateBoard(16);
   sliderValue.textContent = "16";
