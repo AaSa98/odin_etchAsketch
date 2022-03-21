@@ -34,3 +34,7 @@ body {
   border: 1px solid gray;
   padding: 5px;
 }
+
+.control_field{
+  margin: 20px;
+}

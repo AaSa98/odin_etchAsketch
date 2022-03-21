@@ -43,14 +43,28 @@ function changeColor(colorPick) {
         pixel.style.backgroundColor = colorPick;
       })
     );
-  }
-  else{
+  } else {
     pixels.forEach((pixel) =>
       pixel.addEventListener("mouseover", () => {
         pixel.style.backgroundColor = "black";
       })
     );
   }
+}
+
+function randomColorPick() {
+  var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  return randomColor;
+}
+
+function changeToRandomColor() {
+  let board = document.querySelector(".board");
+  let pixels = board.querySelectorAll("div");
+  pixels.forEach((pixel) =>
+    pixel.addEventListener("mouseover", () => {
+      pixel.style.backgroundColor = randomColorPick();
+    })
+  );
 }
 
 function loadPage() {

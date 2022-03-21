@@ -14,28 +14,32 @@
       <h3>Lets draw something :)</h3>
       <div class="interaction">
         <div class="controls">
-          <p class="control_label">Grid-Größe eingeben</p>
-
-          <div id="slidercontainer">
-            <input
-              type="range"
-              min="2"
-              max="100"
-              value="16"
-              class="slider"
-              id="myRange"
-              onchange="changeSize(this.value)"
-            />
-            <p id="sliderValue"></p>
+          <div class="control_field" id="sizeControl">
+            <p class="control_label">Grid-Größe eingeben</p>
+            <div id="slidercontainer">
+              <input
+                type="range"
+                min="2"
+                max="100"
+                value="16"
+                class="slider"
+                id="myRange"
+                onchange="changeSize(this.value)"
+              />
+              <p id="sliderValue"></p>
+            </div>
           </div>
           <button id="resetBtn" onclick="clearBoard()">Clear Board</button>
+          <div class="control_field" id="colorControl">
           <p class="control_label">Color Hex-Code eingeben</p>
           <input
             type="text"
             id="colorPick"
             onchange="changeColor(this.value)"
           />
+        </div>
           <button id="eraser" onclick="changeColor('gray')">Radieren</button>
+          <button id="randomizeColor" onclick="changeToRandomColor()">Random Color</button>
         </div>
         <div class="board"></div>
       </div>
